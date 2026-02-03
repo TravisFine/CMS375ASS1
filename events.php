@@ -1,8 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head>
     <title>Events</title>
-</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 30px;
+            background-color: #3a3a3a;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #484f56;
+        }
+    </style>
+<body>
 <body>
     <h1>Upcoming Campus Events:</h1>
     <ul>
@@ -22,9 +50,11 @@
                 "description" => "We gave them gloves. If you show up you may be punched, whoopsies." ]
         ];
         foreach ($Events as $event) {
-            echo "<li><strong>" . $event["event"] . "</strong> - " . $event["date"] . " at " . $event["location"] . "<br>" . $event["description"] . "</li>";
+            echo "<li><strong>" . $event["event"] . "</strong> - " . $event["date"] . " at " . $event["location"] . "<br>" . $event["description"] . "</li><br>";
         }
         ?>
     </ul>
+
+    <a href="index.html">Return Home</a>
 </body>
 </html>

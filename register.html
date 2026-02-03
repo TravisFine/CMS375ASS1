@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<head>
+    <title>Fox Day Event Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .radio-group,
+        .checkbox-group {
+            margin-top: 10px;
+        }
+        .radio-group label,
+        .checkbox-group label {
+            display: inline-block;
+            margin-right: 20px;
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fox Day Event Registration</h1>
+        <form method="POST" action="process.php">
+            <div class="form-group">
+                <label for="name">Student Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="event">Select an Event</label>
+                <select id="event" name="event" required>
+                    <option value="">-- Choose an Event --</option>
+                    <option value="Fox Petting Zoo">Fox Petting Zoo</option>
+                    <option value="Dunk Tank">Dunk Tank</option>
+                    <option value="Fox Seminar">Fox Seminar</option>
+                    <option value="Fox Boxing">Fox Boxing</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Year</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="year" value="Freshman" required> Freshman</label>
+                    <label><input type="radio" name="year" value="Sophomore"> Sophomore</label>
+                    <label><input type="radio" name="year" value="Junior"> Junior</label>
+                    <label><input type="radio" name="year" value="Senior"> Senior</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">What are you most excited about?</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label><input type="checkbox" name="secret" value="yes"> I promise to keep the Fox Day surprise secret!</label>
+            </div>
+
+            <button type="submit">Register Now</button>
+        </form>
+    </div>
+</body>
+</html>
